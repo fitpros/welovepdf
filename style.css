@@ -1,173 +1,32 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f7fa;
-    color: #2c3e50;
-    line-height: 1.6;
-}
-
-header {
-    background: linear-gradient(135deg, #1e90ff, #00b4d8);
-    padding: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-nav h1 a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #e0f7fa;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #3498db, #2980b9);
-    color: #fff;
-    border-radius: 15px;
-    margin-bottom: 30px;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.tools-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.tool-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    color: #2c3e50;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.tool-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.tool-page {
-    text-align: center;
-    padding: 40px 0;
-}
-
-.tool-action {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    align-items: center;
-}
-
-.tool-action input,
-.tool-action select,
-.tool-action button {
-    padding: 12px 20px;
-    border-radius: 8px;
+/* Previous styles remain, adding new ones for editor */
+#pdfContainer {
+    position: relative;
+    margin: 20px auto;
+    max-width: 800px;
     border: 1px solid #bdc3c7;
-    font-size: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.tool-action input[type="number"] {
-    width: 100px;
+#pdfCanvas {
+    display: block;
 }
 
-.tool-action button {
+#editOverlay {
+    pointer-events: all;
+}
+
+#saveButton {
+    margin-top: 20px;
+    padding: 12px 20px;
     background: #3498db;
     color: #fff;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
-.tool-action button:hover {
+#saveButton:hover {
     background: #2980b9;
-}
-
-.tool-action a {
-    padding: 12px 20px;
-    background: #2ecc71;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s;
-}
-
-.tool-action a:hover {
-    background: #27ae60;
-}
-
-.note {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: #7f8c8d;
-}
-
-footer {
-    background: #2c3e50;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-footer a {
-    color: #1e90ff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #00b4d8;
 }

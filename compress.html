@@ -11,7 +11,10 @@
 <body>
     <header>
         <nav>
-            <h1><a href="index.html">WeLovePDF</a></h1>
+            <div class="logo">
+                <img src="logo.png" alt="WeLovePDF Logo" width="50">
+                <h1><a href="index.html">WeLovePDF</a></h1>
+            </div>
             <ul>
                 <li><a href="merge.html">Merge PDF</a></li>
                 <li><a href="compress.html">Compress PDF</a></li>
@@ -24,7 +27,7 @@
     <main>
         <section class="tool-page">
             <h2>Compress PDF</h2>
-            <p>Reduce your PDF file size without losing quality.</p>
+            <p>Reduce your PDF file size (coming soon).</p>
             <div class="tool-action">
                 <input type="file" id="compressFile" accept=".pdf">
                 <button onclick="compressPDF()">Compress Now</button>
@@ -36,6 +39,7 @@
         <p>© 2025 WeLovePDF. All rights reserved.</p>
         <p><a href="#">Privacy</a> | <a href="#">Terms</a></p>
     </footer>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

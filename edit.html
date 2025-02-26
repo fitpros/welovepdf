@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Edit PDF files easily with WeLovePDF - add text, shapes, and more.">
+    <meta name="description" content="Edit PDF files interactively with WeLovePDF - add text, change fonts, and more.">
     <meta name="keywords" content="edit PDF, PDF editor, WeLovePDF">
     <title>Edit PDF - WeLovePDF</title>
     <link rel="stylesheet" href="style.css">
@@ -28,16 +28,24 @@
     <main>
         <section class="tool-page">
             <h2>Edit PDF</h2>
-            <p>Add text or shapes to your PDF file.</p>
+            <p>Upload a PDF and edit it interactively.</p>
             <div class="tool-action">
                 <input type="file" id="editFile" accept=".pdf">
                 <input type="text" id="editText" placeholder="Text to add">
-                <input type="number" id="xPos" placeholder="X Position" min="0" value="50">
-                <input type="number" id="yPos" placeholder="Y Position" min="0" value="50">
-                <button onclick="editPDF()">Edit Now</button>
-                <a id="downloadEditLink" style="display:none" download="edited.pdf">Download Edited PDF</a>
+                <select id="fontSize">
+                    <option value="12">12px</option>
+                    <option value="20">20px</option>
+                    <option value="30">30px</option>
+                </select>
+                <input type="color" id="fontColor" value="#000000">
+                <button onclick="loadPDF()">Load PDF</button>
             </div>
-            <p class="note">Note: X/Y positions depend on page size (e.g., 0-600 for A4).</p>
+            <div id="pdfContainer">
+                <canvas id="pdfCanvas"></canvas>
+                <div id="editOverlay" style="position: absolute; top: 0; left: 0;"></div>
+            </div>
+            <button id="saveButton" style="display:none;" onclick="savePDF()">Save Edited PDF</button>
+            <a id="downloadEditLink" style="display:none" download="edited.pdf">Download Edited PDF</a>
         </section>
     </main>
 
@@ -46,6 +54,7 @@
         <p><a href="#">Privacy</a> | <a href="#">Terms</a></p>
     </footer>
     <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

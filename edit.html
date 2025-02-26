@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Edit PDF files by adding text, images, and more with WeLovePDF.">
+    <meta name="description" content="Edit PDF files easily with WeLovePDF - add text, shapes, and more.">
     <meta name="keywords" content="edit PDF, PDF editor, WeLovePDF">
     <title>Edit PDF - WeLovePDF</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="logo.png" alt="WeLovePDF Logo" width="50">
+                <img src="logo.png" alt="WeLovePDF Logo" width="40">
                 <h1><a href="index.html">WeLovePDF</a></h1>
             </div>
             <ul>
-                <li><a href="merge.html">Merge PDF</a></li>
-                <li><a href="compress.html">Compress PDF</a></li>
-                <li><a href="convert.html">Convert PDF</a></li>
-                <li><a href="edit.html">Edit PDF</a></li>
+                <li><a href="merge.html">Merge</a></li>
+                <li><a href="compress.html">Compress</a></li>
+                <li><a href="convert.html">Convert</a></li>
+                <li><a href="edit.html">Edit</a></li>
             </ul>
         </nav>
     </header>
@@ -27,13 +28,16 @@
     <main>
         <section class="tool-page">
             <h2>Edit PDF</h2>
-            <p>Add text to your PDF.</p>
+            <p>Add text or shapes to your PDF file.</p>
             <div class="tool-action">
                 <input type="file" id="editFile" accept=".pdf">
-                <input type="text" id="editText" placeholder="Enter text to add">
+                <input type="text" id="editText" placeholder="Text to add">
+                <input type="number" id="xPos" placeholder="X Position" min="0" value="50">
+                <input type="number" id="yPos" placeholder="Y Position" min="0" value="50">
                 <button onclick="editPDF()">Edit Now</button>
                 <a id="downloadEditLink" style="display:none" download="edited.pdf">Download Edited PDF</a>
             </div>
+            <p class="note">Note: X/Y positions depend on page size (e.g., 0-600 for A4).</p>
         </section>
     </main>
 

@@ -11,7 +11,10 @@
 <body>
     <header>
         <nav>
-            <h1><a href="index.html">WeLovePDF</a></h1>
+            <div class="logo">
+                <img src="logo.png" alt="WeLovePDF Logo" width="50">
+                <h1><a href="index.html">WeLovePDF</a></h1>
+            </div>
             <ul>
                 <li><a href="merge.html">Merge PDF</a></li>
                 <li><a href="compress.html">Compress PDF</a></li>
@@ -24,10 +27,12 @@
     <main>
         <section class="tool-page">
             <h2>Edit PDF</h2>
-            <p>Add text, images, or annotations to your PDF.</p>
+            <p>Add text to your PDF.</p>
             <div class="tool-action">
                 <input type="file" id="editFile" accept=".pdf">
+                <input type="text" id="editText" placeholder="Enter text to add">
                 <button onclick="editPDF()">Edit Now</button>
+                <a id="downloadEditLink" style="display:none" download="edited.pdf">Download Edited PDF</a>
             </div>
         </section>
     </main>
@@ -36,6 +41,7 @@
         <p>© 2025 WeLovePDF. All rights reserved.</p>
         <p><a href="#">Privacy</a> | <a href="#">Terms</a></p>
     </footer>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
